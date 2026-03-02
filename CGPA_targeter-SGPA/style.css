@@ -1,0 +1,160 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f3f6fb;
+  min-height: 100vh;
+}
+.note {
+  margin-top: 28px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.4;
+
+  color: #374151;
+  background: #f3f4f6;
+
+  border-left: 4px solid #4f46e5;
+  border-radius: 10px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== HERO HEADER ===== */
+.hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  text-align: center;
+  padding: 70px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ===== CARD WRAPPER ===== */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+  padding: 0 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  width: 100%;
+  max-width: 520px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== INPUTS ===== */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ===== RESULT ===== */
+.result {
+  margin-top: 25px;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+}
+
+/* Difficulty Colors */
+.result.easy {
+  display: block;
+  background: #e6f9ec;
+  color: #1e7e34;
+  border-left: 5px solid #28a745;
+}
+
+.result.medium {
+  display: block;
+  background: #fff8e6;
+  color: #b8860b;
+  border-left: 5px solid #ffc107;
+}
+
+.result.hard {
+  display: block;
+  background: #ffeaea;
+  color: #c82333;
+  border-left: 5px solid #dc3545;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .card {
+    padding: 25px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JNTU CGPA Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const btn = item.querySelector(".faq-question");
+
+        btn.addEventListener("click", () => {
+          faqItems.forEach((i) => {
+            if (i !== item) {
+              i.classList.remove("active");
+            }
+          });
+
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-text">JNTU CGPA Planner</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Plan Your CGPA. Predict Your Future.</h1>
+        <p>
+          All-in-one academic planning tools built specifically for JNTU
+          students.
+        </p>
+      </div>
+
+      <div class="hero-tools">
+        <a
+          href="../cgpa-sgpa_universal_home/cgpa-target.html"
+          class="hero-card"
+        >
+          <div class="card-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>CGPA Targeter</h3>
+          <p>Plan required SGPA for your desired CGPA.</p>
+        </a>
+
+        <a href="../SGPA_CALCULATOR/Sgpa.html" class="hero-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <h3>SGPA Calculator</h3>
+          <p>Calculate semester SGPA easily.</p>
+        </a>
+
+        <a href="../CGPA_calculator_through_SGPA/cgpa.html" class="hero-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <h3>CGPA Calculator</h3>
+          <p>Calculate overall CGPA.</p>
+        </a>
+
+        <a href="../percentage/percentage.html" class="hero-card">
+          <div class="card-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>CGPA to Percentage</h3>
+          <p>Convert CGPA into percentage.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Trust Section ===== -->
+    <section class="trust">
+      <p>Designed for students of JNTUA • JNTUH • JNTUK</p>
+      <section class="grading-system" id="tools">
+        <div class="section-header">
+          <h2>JNTU Grading System Overview</h2>
+          <p>
+            All calculations are based on the official 10-point credit-based
+            grading system followed by JNTUA, JNTUH, and JNTUK, ensuring
+            accurate SGPA, CGPA, and percentage results.
+          </p>
+        </div>
+
+        <div class="grading-grid">
+          <div class="grading-card">
+            <div class="icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3>SGPA Formula</h3>
+            <p><strong>SGPA = Σ(Ci × Gi) / ΣCi</strong></p>
+            <p>Ci = Subject Credits, Gi = Grade Points</p>
+          </div>
+
+          <div class="grading-card">
+            <div class="icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>CGPA Calculation</h3>
+            <p><strong>CGPA = Σ(Si × Ci) / ΣCi</strong></p>
+            <p>Si = Semester SGPA, Ci = Semester Credits</p>
+          </div>
+
+          <div class="grading-card">
+            <div class="icon">
+              <i class="fa-solid fa-percent"></i>
+            </div>
+            <h3>Percentage Conversion</h3>
+            <p><strong>(CGPA − 0.5) × 10</strong></p>
+            <p>Official JNTU conversion formula</p>
+          </div>
+
+          <div class="grading-card">
+            <div class="icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <h3>Universities Covered</h3>
+            <p>JNTUA • JNTUH • JNTUK</p>
+            <p>Supports all regulations</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="grading-section" id="how">
+      <div class="grading-container">
+        <h2>JNTU 10-Point Grading System</h2>
+        <p class="grading-subtitle">
+          Based on the official credit-based grading system followed by JNTUA,
+          JNTUH and JNTUK.
+        </p>
+        <div class="grading-table-wrapper">
+          <table class="grading-table">
+            <thead>
+              <tr>
+                <th>Marks Range</th>
+                <th>Grade</th>
+                <th>Grade Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>≥ 90</td>
+                <td>A+ (Outstanding)</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>80 – 89</td>
+                <td>A (Excellent)</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>70 – 79</td>
+                <td>B (Very Good)</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>60 – 69</td>
+                <td>C (Good)</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>50 – 59</td>
+                <td>D (Fair)</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>40 – 49</td>
+                <td>E (Satisfactory)</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>&lt; 40</td>
+                <td>F (Fail)</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Absent</td>
+                <td>Ab (Absent)</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- FAQ Item -->
+        <div class="faq-item">
+          <button class="faq-question">
+            How is SGPA calculated under JNTU regulations?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            SGPA (Semester Grade Point Average) is calculated by dividing the
+            sum of (Credits × Grade Points) of all subjects by the total credits
+            of that semester.
+            <br /><br />
+            Formula: <strong>SGPA = Σ (Ci × Gi) / Σ Ci</strong>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How is CGPA calculated from multiple semesters?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            CGPA is the weighted average of all semester SGPAs. Each semester
+            SGPA is multiplied by its credits and divided by total completed
+            credits.
+            <br /><br />
+            Formula: <strong>CGPA = Σ (Si × Ci) / Σ Ci</strong>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What formula is used to convert CGPA into percentage?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            For JNTU B.Tech programs, percentage is calculated using:
+            <br /><br />
+            <strong>Percentage = (CGPA − 0.5) × 10</strong>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens if I fail in a subject?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            A failed subject receives grade point 0. This reduces the SGPA.
+            After clearing the subject, the updated grade is considered in CGPA
+            calculation according to university rules.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I improve my CGPA in future semesters?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Since CGPA is credit-weighted, scoring higher in upcoming
+            semesters especially high-credit subjects can significantly improve
+            your overall CGPA.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are these formulas based on official JNTU regulations?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. The SGPA, CGPA and percentage formulas follow the standard
+            10-point credit-based grading system used across JNTUA, JNTUH and
+            JNTUK.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="about" id="about">
+      <h2>About This Platform</h2>
+      <p>
+        JNTU CGPA Planner is built to help students calculate and plan their
+        academic performance using structured and accurate formulas. Designed
+        for simplicity, clarity and efficiency.
+      </p>
+    </section>
+
+    <!-- ===== Final CTA Section ===== -->
+    <section class="cta">
+      <h2>Start Planning Your CGPA Today</h2>
+      <a href="../cgpa-sgpa_universal_home/cgpa-target.html" class="btn-primary"
+        >Open CGPA Target Planner</a
+      >
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div>
+          <h4>JNTU CGPA Planner</h4>
+          <p>Academic planning tools for JNTU students.</p>
+        </div>
+
+        <div>
+          <h4>Tools</h4>
+          <ul>
+            <li>
+              <a href="../cgpa-sgpa_universal_home/cgpa-target.html"
+                >CGPA Targeter</a
+              >
+            </li>
+            <li><a href="../SGPA_CALCULATOR/Sgpa.html">SGPA Calculator</a></li>
+            <li>
+              <a href="../CGPA_calculator_through_SGPA/cgpa.html"
+                >CGPA Calculator</a
+              >
+            </li>
+            <li>
+              <a href="../percentage/percentage.html">CGPA to Percentage</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 JNTU CGPA Planner. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

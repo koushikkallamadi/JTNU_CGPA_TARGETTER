@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | CGPA Planner</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("_4yia8T1BrGfLBH6w"); // paste here
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs
+            .send("service_b9vw0iq", "template_t653x87", {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              subject: document.getElementById("subject").value,
+              message: document.getElementById("message").value,
+            })
+            .then(function () {
+              alert("✅ Message sent successfully!");
+              form.reset();
+            })
+            .catch(function (error) {
+              console.log(error);
+              alert("❌ Failed to send message");
+            });
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+      }
+
+      .container {
+        background: white;
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-info {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: white;
+        padding: 50px 40px;
+      }
+
+      .contact-info h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .contact-info p {
+        opacity: 0.9;
+        margin-bottom: 30px;
+      }
+
+      .info-item {
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+
+      .form-section {
+        padding: 50px 40px;
+      }
+
+      .form-section h2 {
+        margin-bottom: 20px;
+        color: #1e293b;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group input,
+      .input-group textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e1;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .input-group input:focus,
+      .input-group textarea:focus {
+        border-color: #4f46e5;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+      }
+
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+      .btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: none;
+        background: #2563eb;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+      }
+      .btn.loading {
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      .success-message {
+        margin-top: 15px;
+        font-size: 14px;
+        color: green;
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+        .contact-info {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>
+          Have suggestions, feedback, or found a bug? Feel free to message us.
+        </p>
+
+        <div class="info-item">📧 kallamadikoushik@gmail.com</div>
+        <div class="info-item">📍 Anantapur, India</div>
+        <div class="info-item">🌐 CGPA Future Planner</div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-section">
+        <h2>Send Message</h2>
+
+        <form id="contactForm">
+          <div class="input-group">
+            <input type="text" id="name" placeholder="Full Name" required />
+          </div>
+
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <input type="text" id="subject" placeholder="Subject" required />
+          </div>
+
+          <div class="input-group">
+            <textarea
+              id="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn" id="submitBtn">Send Message</button>
+
+          <div class="success-message" id="successMsg">
+            ✅ Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

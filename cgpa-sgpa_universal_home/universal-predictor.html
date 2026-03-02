@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Universal CGPA Target Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="universal.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <!-- ===== BLUE HERO HEADER ===== -->
+    <!-- ===== PREMIUM BLUE HEADER ===== -->
+    <header class="hero">
+      <h1>CGPA Target → Required SGPA</h1>
+    </header>
+
+    <!-- Main Section -->
+    <section class="wrapper">
+      <div class="card">
+        <p id="regulationText" class="regulation-text"></p>
+
+        <!-- Credits -->
+        <div id="creditsContainer" class="credits-grid"></div>
+
+        <!-- Current Semester -->
+        <div class="form-group">
+          <label>Current Semester</label>
+          <select id="currentSem"></select>
+        </div>
+
+        <!-- Current CGPA -->
+        <div class="form-group">
+          <label>Current CGPA</label>
+          <input type="number" id="currentCGPA" step="0.01" />
+        </div>
+
+        <!-- Target Semester -->
+        <div class="form-group">
+          <label>Target Semester</label>
+          <select id="targetSem"></select>
+        </div>
+
+        <!-- Target CGPA -->
+        <div class="form-group">
+          <label>Target CGPA</label>
+          <input type="number" id="targetCGPA" step="0.01" />
+        </div>
+
+        <button id="calculateBtn">Calculate Required SGPA</button>
+        <p class="note">
+          Note: This SGPA is a carefully calculated estimate to guide your
+          planning. The final CGPA may vary slightly (±0.05) depending on
+          official university rounding methods.
+        </p>
+
+        <div id="result" class="result"></div>
+      </div>
+    </section>
+
+    <script src="universal.js"></script>
+  </body>
+</html>

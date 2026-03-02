@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JNTU SGPA Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sgpa.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <h1>JNTU SGPA Calculator</h1>
+      <p>
+        Calculate your semester SGPA using official JNTU grade point system. Add
+        subjects, enter credits, and get accurate results instantly.
+      </p>
+    </header>
+
+    <div class="container">
+      <h2>Calculate Semester SGPA</h2>
+      <p class="formula">SGPA = Σ (Credits × Grade Points) / Total Credits</p>
+
+      <div id="subjectsContainer"></div>
+
+      <button id="addSubjectBtn" class="add-btn">+ Add Subject</button>
+
+      <div class="action-buttons">
+        <button id="calculateBtn" class="primary-btn">Calculate SGPA</button>
+        <button id="resetBtn" class="secondary-btn">Reset</button>
+      </div>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="sgpa.js"></script>
+  </body>
+</html>

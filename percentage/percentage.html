@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CGPA to Percentage Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="percentage.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>CGPA to Percentage Converter</h1>
+      <p>
+        Convert your CGPA into percentage using official JNTU conversion
+        formula.
+      </p>
+    </header>
+
+    <div class="container">
+      <label>Enter CGPA</label>
+      <input
+        type="number"
+        id="cgpaInput"
+        step="0.01"
+        min="0"
+        max="10"
+        placeholder="Enter CGPA"
+      />
+
+      <button id="convertBtn">Convert</button>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="percentage.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNTU CGPA Target Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <h1>CGPA Target → Required SGPA</h1>
+      <p>
+        Plan your academic performance smartly. Enter your current CGPA and
+        target to calculate the SGPA you need.
+      </p>
+    </header>
+
+    <!-- CARD SECTION -->
+    <main class="wrapper">
+      <section class="card">
+        <div class="form-group">
+          <label for="currentSem">Current Semester</label>
+          <select id="currentSem"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="currentCGPA">Current CGPA</label>
+          <input type="number" step="0.01" id="currentCGPA" min="0" max="10" />
+        </div>
+
+        <div class="form-group">
+          <label for="targetSem">Target Semester</label>
+          <select id="targetSem"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="targetCGPA">Target CGPA</label>
+          <input type="number" step="0.01" id="targetCGPA" min="0" max="10" />
+        </div>
+
+        <button id="calculateBtn">Calculate Required SGPA</button>
+
+        <div id="result" class="result"></div>
+        <p class="note">
+          Note: This SGPA is a carefully calculated estimate to guide your
+          planning. The final CGPA may vary slightly (±0.05) depending on
+          official university rounding methods.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
